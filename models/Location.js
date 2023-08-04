@@ -21,5 +21,12 @@ Location.init (
             type: DataTypes.INTEGER,
             allowNull: false
         }
-    }
+    },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'location',
+      }
 )
