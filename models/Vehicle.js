@@ -49,4 +49,6 @@ Vehicle.init (
         underscored: true,
         modelName: 'vehicle',
       }
-)
+);
+
+module.exports = Vehicle;

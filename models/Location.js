@@ -29,4 +29,6 @@ Location.init (
         underscored: true,
         modelName: 'location',
       }
-)
+);
+
+module.exports = Location;
