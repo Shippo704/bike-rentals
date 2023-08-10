@@ -3,20 +3,26 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="/bike-rentals/public/css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <title>Road Hogs Rentals</title>
   </head>
   <body>
-    {{!-- nav section --}}
+    {{! nav section }}
+    {{! need to add img of profile picture }}
     <nav>
-        <a href="/">Home</a>
-        <a href="/">Rental Prices</a>
+      <a href="/">Home</a>
+      <a href="/">Rental Prices</a>
+      {{#if logged_in}}
+        <a href="/">logout</a>
+      {{else}}
         <a href="/">login</a>
+      {{/if}}
     </nav>
     <section>
-        <img src="/bike-rentals/public/images/background.jpeg" class="bg">
-        <img src="/bike-rentals/public/images/pigOnBikeTPWheels.jpg" class="bike">
-        {{!-- login section --}}
+      <img src="/bike-rentals/public/images/background.jpeg" class="bg" />
+      <img
+        src="/bike-rentals/public/images/pigOnBikeTPWheels.jpg" class="bike"/>
+      {{{body}}}
     </section>
   </body>
 
