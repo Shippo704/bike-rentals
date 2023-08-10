@@ -59,6 +59,7 @@ User.init (
             async beforeCreate(newUserData) {
               newUserData.password = await bcrypt.hash(newUserData.password, 10);
               newUserData.creditCard = await cryptr.encrypt(newUserData.creditCard, 10 );
+              //newUserData.username = cryptr.decrypt(newUserData.username);
               return newUserData;
             },    
        
