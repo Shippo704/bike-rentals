@@ -8,10 +8,6 @@ class User extends Model {
     checkPassword(password) {
         return bcrypt.compareSync(password, this.password);
     };
-    validateEmail(email) {
-        return (email==this.email);
-    }
-// add validateEmail function
 }
 
 User.init (
@@ -28,7 +24,11 @@ User.init (
         },
         email: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            unique: true,
+            validate: {
+                isEmail: true
+            }
         },
         password: {
             type: DataTypes.STRING,
