@@ -18,7 +18,7 @@ Location.init (
             allowNull: false,
         },
         hours: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false
         }
     },
