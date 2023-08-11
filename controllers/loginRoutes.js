@@ -5,13 +5,14 @@ const {User} = require('../models');
 //   res.render('login');
 // });
 
+// New User
 router.post('/', async (req, res) => {
     try {
       const userData = await User.create(req.body);
   
       req.session.save(() => {
         req.session.user_id = userData.id;
-        req.session.logged_in = true;
+        req.session.loggedIn = true;
   
         res.status(200).json(userData);
       });
@@ -48,7 +49,7 @@ router.post('/', async (req, res) => {
   
       req.session.save(() => {
         req.session.user_id = userData.id;
-        req.session.logged_in = true;
+        req.session.loggedIn = true;
         
         res.json({ user: userData, message: 'You are now logged in!' });
       });
@@ -60,7 +61,7 @@ router.post('/', async (req, res) => {
   
   // Logout
   router.post('/logout', (req, res) => {
-    if (req.session.logged_in) {
+    if (req.session.loggedIn) {
       req.session.destroy(() => {
         res.status(204).end();
       });

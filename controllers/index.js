@@ -4,7 +4,7 @@ const loginRoutes = require('./loginRoutes');
 const rentalRoutes = require('./rentalRoutes');
 
 router.use('/', homeRoutes);
-router.use('/api', loginRoutes);
-router.use('/api', rentalRoutes);
+router.use('/', loginRoutes);
+router.use('/', rentalRoutes);
 
 module.exports = router;
