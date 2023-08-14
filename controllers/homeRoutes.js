@@ -12,4 +12,9 @@ router.get('/rental', async (req, res) => {
   // Send the rendered Handlebars.js template back as the response
   res.render('rental');
 });
+router.get('/signup', async (req,res) => {
+  // Send the rendered Handlebars.js template back as the response
+  res.render('signup');
+});
+
 module.exports = router;
