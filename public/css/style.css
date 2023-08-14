@@ -303,7 +303,7 @@ input[type="submit"].btn:hover {
 .wave.-three {
   animation: drift 7500ms infinite linear;
 	position: fixed;
-	background-color: #77daff;
+	background-color: #f8f8f8;
 }
 
 .wave.-two {
