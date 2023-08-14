@@ -1,8 +1,38 @@
 <!-- For the rental page -->
-<section class="rental">
-  <img src="/images/{{painting.filename}}" alt="{{painting.description}}">
-  <div class="rental-details">
-    <h3>{{vehicle.title}}</h3>
-    <p>By: {{painting.artist}}</p>
-  </div>
-</section>
+<table>
+  <caption>Rental Options</caption>
+  <tr>
+    <th>Name</th>
+    <th>Cost per hour</th>
+    <th>Location</th>
+    <th>Availability</th>
+  </tr>
+  <tr>
+    <td>Electric bicycle EB2</td>
+    <td>Electric bicycle E-Wild C2</td>
+    <td>Electric Scooter Urban T2</td>
+    <td>Electric Scooter Transporter</td>
+    <td>Electric Scooter C35</td>
+  </tr>
+  <tr>
+    <td>20</td>
+    <td>20</td>
+    <td>25</td>
+    <td>20</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>{{{address}}}</td>
+    <td>{{{address}}}</td>
+    <td>{{{address}}}</td>
+    <td>{{{address}}}</td>
+    <td>{{{address}}}</td>
+  </tr>
+  <tr>
+    <td>{{{isAvailable}}}</td>
+    <td>{{{isAvailable}}}</td>
+    <td>{{{isAvailable}}}</td>
+    <td>{{{isAvailable}}}</td>
+    <td>{{{isAvailable}}}</td>
+  </tr>
+</table>
