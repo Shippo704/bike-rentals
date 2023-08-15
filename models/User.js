@@ -5,9 +5,9 @@ const cryptr = new Cryptr('secretWord');
 const sequelize = require('../config/connection');
 
 class User extends Model {
-// add validateEmail function
-// add checkPassword function
-// add encrypt/decrypt functions for creditCard and cvc
+    checkPassword(password) {
+        return bcrypt.compareSync(password, this.password);
+    };
 }
 
 User.init (
@@ -24,7 +24,11 @@ User.init (
         },
         email: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            unique: true,
+            validate: {
+                isEmail: true
+            }
         },
         password: {
             type: DataTypes.STRING,

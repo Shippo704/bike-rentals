@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const {Vehicle} = require('../models');
 const {Location} = require('../models');
+const loggedIn = require('../utils/helpers');
 
 // Default rental page
 router.get('/', async (req, res) => {
@@ -8,7 +9,7 @@ router.get('/', async (req, res) => {
 });
 
 // Get all available vehicles at a specific location
-router.get('/location/:id', async (req, res) => {
+router.get('/location/:id', loggedIn, async (req, res) => {
     try {
         const vehicleByLocData = await Vehicle.findAll({
             where: {
@@ -24,7 +25,7 @@ router.get('/location/:id', async (req, res) => {
 });
 
 // Get all of specific vehicle type that are available
-router.get('/vehicle/:type', async (req, res) => {
+router.get('/vehicle/:type', loggedIn, async (req, res) => {
     try {
         const vehicleData = await Vehicle.findAll({
             where: {
