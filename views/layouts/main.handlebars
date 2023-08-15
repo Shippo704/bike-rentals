@@ -7,17 +7,20 @@
     <title>Road Hogs Rentals</title>
   </head>
   <body>
+    <header>
+
     {{! need to add img of profile picture }}
-     <img src="../public/images/roadHogsLogoTPBG.jpg" alt="logo" class="logo" />
-    <nav>
-      <a href="/">Home</a>
-      <a href="/">Rental Prices</a>
-      {{#if logged_in}}
+      <img src="/images/roadHogsLogoTPBG.jpg" alt="logo" class="logo" />
+      <nav>
+        <a href="/">Home</a>
+        <a href="/">Rental Prices</a>
+        {{#if logged_in}}
         <a href="/"><button>Logout</button></a>
-      {{else}}
+        {{else}}
         <a href="/"><button>Login</button></a>
-      {{/if}}
-    </nav>
+        {{/if}}
+      </nav>
+    </header>
     <section>
       <div class="box">
         <div class="wave -one"></div>

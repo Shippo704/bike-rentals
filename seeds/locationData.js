@@ -33,7 +33,11 @@ const locationData = [
     },
     
   ];
+
   
-  const seedLocation = () => Location.bulkCreate(locationData);
-  
+  const seedLocation = async () => {
+ 
+     Location.bulkCreate(locationData);
+    
+}
   module.exports = seedLocation;
