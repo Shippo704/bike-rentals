@@ -4,59 +4,59 @@ const userData = [
     
     {
         name: 'name', 
-        email: 'email', 
+        email: 'email1@gmail.com', 
         password:'password',
         phone: 'phone',
         creditCard:'Credit card number',
-        cvc: 'cvc code',
+        cvc: '123',
     },
 
     {
         name: 'name', 
-        email: 'email', 
+        email: 'email2@gmail.com', 
         password:'password',
         phone: 'phone',
         creditCard:'Credit card number',
-        cvc: 'cvc code',
+        cvc: '111',
     },
 
     {
         name: 'name', 
-        email: 'email', 
+        email: 'email3@gmail.com', 
         password:'password',
         phone: 'phone',
         creditCard:'Credit card number',
-        cvc: 'cvc code',
+        cvc: '939',
     },
 
     {
         name: 'name', 
-        email: 'email', 
+        email: 'email4@gmail.com', 
         password:'password',
         phone: 'phone',
         creditCard:'Credit card number',
-        cvc: 'cvc code',
+        cvc: '898',
     },
 
     {
         name: 'name', 
-        email: 'email', 
+        email: 'email5@gmail.com', 
         password:'password',
         phone: 'phone',
         creditCard:'Credit card number',
-        cvc: 'cvc code',
+        cvc: '879',
     },
 
     {
         name: 'name', 
-        email: 'email', 
+        email: 'email6@gmail.com', 
         password:'password',
         phone: 'phone',
         creditCard:'Credit card number',
-        cvc: 'cvc code',
+        cvc: '456',
     },
   ];
 
-const seedUser = () => User.bulkCreate(UserData);
+const seedUser = () => User.bulkCreate(userData);
 
 module.exports = seedUser;

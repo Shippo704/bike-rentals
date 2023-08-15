@@ -39,11 +39,11 @@ User.init (
             allowNull: false
         },
         creditCard: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false
         },
         cvc: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false
         },
         // FOREIGN KEY

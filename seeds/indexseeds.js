@@ -6,9 +6,9 @@ const seedUser = require('./userData');
 const seedAll = async () => {
   await sequelize.sync({ force: true });
 
+  await seedLocation();
   await seedVehicle();
 
-  await seedLocation();
 
   await seedUser();
 
