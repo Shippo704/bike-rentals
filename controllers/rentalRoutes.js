@@ -4,8 +4,16 @@ const {Location} = require('../models');
 const loggedIn = require('../utils/helpers');
 
 // Default rental page
+// Get all rentals
 router.get('/', async (req, res) => {
-  res.render('rental');
+    try {
+        const allRentals = await Vehicle.findAll({});
+        res.status(200).json(allRentals);
+    }
+    catch (err) {
+        res.status(400).json(err);
+    }
+    res.render('rental');
 });
 
 // Get all available vehicles at a specific location
