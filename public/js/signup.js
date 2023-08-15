@@ -11,7 +11,7 @@ const signupFormHandler = async (event) => {
     if (name && email && password && phone && creditCard && cvc) {
       const response = await fetch('/signup', {
         method: 'POST',
-        body: JSON.stringify({ name, email, password, phone, creditCard, cvc }),
+        body: JSON.stringify({ name, email, password, phone, creditCard, cvc, location:1 }),
         headers: { 'Content-Type': 'application/json' },
       });
   
