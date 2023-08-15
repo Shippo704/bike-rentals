@@ -6,20 +6,20 @@ router.get('/', async (req, res) => {
 });
 
 // New User
-router.post('/', async (req, res) => {
-    try {
-      const userData = await User.create(req.body);
+// router.post('/', async (req, res) => {
+//     try {
+//       const userData = await User.create(req.body);
   
-      req.session.save(() => {
-        req.session.user_id = userData.id;
-        req.session.loggedIn = true;
+//       req.session.save(() => {
+//         req.session.user_id = userData.id;
+//         req.session.loggedIn = true;
   
-        res.status(200).json(userData);
-      });
-    } catch (err) {
-      res.status(400).json(err);
-    }
-  });
+//         res.status(200).json(userData);
+//       });
+//     } catch (err) {
+//       res.status(400).json(err);
+//     }
+//   });
   
   // Login
   router.post('/login', async (req, res) => {
@@ -36,7 +36,7 @@ router.post('/', async (req, res) => {
         });
         return;
       }
-  
+      console.log("username exists");
       // Check that password is correct
       const validPassword = await userData.checkPassword(req.body.password);
       
@@ -46,14 +46,14 @@ router.post('/', async (req, res) => {
           .json({ message: 'Incorrect email or password, please try again' });
         return;
       }
-  
+      console.log("password OK");
       req.session.save(() => {
         req.session.user_id = userData.id;
         req.session.loggedIn = true;
         
         res.json({ user: userData, message: 'You are now logged in!' });
       });
-  
+      console.log("logged in");
     } catch (err) {
       res.status(400).json(err);
     }
