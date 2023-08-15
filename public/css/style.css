@@ -11,7 +11,7 @@
 body{
 	margin: 0;
 	padding: 0;
-	background-color: #edf113;
+	background-color: #e1e508;
 	overflow-x:hidden;
 	overflow-y:hidden;
 }
@@ -21,7 +21,7 @@ li, a, button {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  color: #edf0f1;
+  color: #171818;
   text-decoration: none;
 }
 
@@ -35,6 +35,7 @@ header {
 .logo {
   cursor: pointer;
   margin-right: auto;
+  width: 12%;
 }
 
 .nav_links {
@@ -51,7 +52,7 @@ header {
 }
 
 .nav_links li a:hover {
-  color: antiquewhite;
+  color: rgb(238, 150, 36);
 }
 
 button {
@@ -294,7 +295,7 @@ table, th, td {
   position: absolute;
   top: 3%;
   left: 10%;
-  background: #0af;
+  background: rgb(242, 94, 81);
   width: 1500px;
   height: 1300px;
   margin-left: -150px;
@@ -313,7 +314,7 @@ table, th, td {
 .wave.-two {
   animation: drift 3000ms infinite linear;
   opacity: .1;
-  background: black;
+  background: rgb(240, 238, 238);
 	position: fixed;
 }
 
