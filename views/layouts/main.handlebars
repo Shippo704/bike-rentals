@@ -13,11 +13,11 @@
       <img src="/images/roadHogsLogoTPBG.jpg" alt="logo" class="logo" />
       <nav>
         <a href="/">Home</a>
-        <a href="/">Rental Prices</a>
-        {{#if logged_in}}
+        <a href="/rental">Rental Prices</a>
+        {{#if loggedIn}}
         <a href="/"><button>Logout</button></a>
         {{else}}
-        <a href="/"><button>Login</button></a>
+        <a href="/login"><button>Login</button></a>
         {{/if}}
       </nav>
     </header>

@@ -1,13 +1,23 @@
 {{!-- sign up page --}}
 <div>
-    <form>
+    <form class="signupForm">
       <p>Create Username</p>
-      <input id ="username" type="text" name="" placeholder="Enter Username">
+      <input id ="username-signup" type="text" name="" placeholder="Enter Username">
       <p>Create Password</p>
-      <input id="password" type="password" name="" placeholder="Enter Password"><br>
+      <input id="password-signup" type="password" name="" placeholder="Enter Password"><br>
       <p>Confirm Password</p>
-      <input id ="confirmPassword" type="password" name="" placeholder="Confirm Password"><br>
+      <input id ="confirmPassword-signup" type="password" name="" placeholder="Confirm Password"><br>
+      <p>Email</p>
+      <input id ="email-signup" type="text" name="" placeholder="Enter Email"><br>
+      <p>Phone Number</p>
+      <input id="phone" type="text" name="" placeholder="Enter Phone Number"><br>
+      <p>Credit Card</p>
+      <input id="creditCard" type="text" name="" placeholder="Enter Credit Card"><br>
+      <p>CVC</p>
+      <input id="cvc" type="text" name="" placeholder="Enter CVC"><br>
       <button onclick="signup" id="signupButton">Create Account</button>
       <div class="container signup">
-        <p>Already have an account? <a href="#">Login</a>.</p>
+        <p>Already have an account? <a href="/login">Login</a>.</p>
 </div>
+
+<script src="./js/signup.js"></script>

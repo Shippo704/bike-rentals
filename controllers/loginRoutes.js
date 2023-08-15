@@ -1,59 +1,59 @@
 const router = require('express').Router();
 const {User} = require('../models');
 
-// router.get('/', async (req, res) => {
-//   res.render('login');
-// });
+router.get('/', async (req, res) => {
+  res.render('login');
+});
 
 // New User
-router.post('/', async (req, res) => {
-    try {
-      const userData = await User.create(req.body);
+// router.post('/', async (req, res) => {
+//     try {
+//       const userData = await User.create(req.body);
   
-      req.session.save(() => {
-        req.session.user_id = userData.id;
-        req.session.loggedIn = true;
+//       req.session.save(() => {
+//         req.session.user_id = userData.id;
+//         req.session.loggedIn = true;
   
-        res.status(200).json(userData);
-      });
-    } catch (err) {
-      res.status(400).json(err);
-    }
-  });
+//         res.status(200).json(userData);
+//       });
+//     } catch (err) {
+//       res.status(400).json(err);
+//     }
+//   });
   
   // Login
   router.post('/login', async (req, res) => {
     try {
       const userData = await User.findOne({ 
         where: { 
-            email: req.body.email 
+            username: req.body.username
         }});
         
       // Check if given email is registered
       if (!userData) {
         res.status(400).json({ 
-            message: 'Incorrect email or password, please try again'
+            message: 'Incorrect username or password, please try again'
         });
         return;
       }
-  
+      console.log("username exists");
       // Check that password is correct
       const validPassword = await userData.checkPassword(req.body.password);
       
       if (!validPassword) {
         res
           .status(400)
-          .json({ message: 'Incorrect email or password, please try again' });
+          .json({ message: 'Incorrect username or password, please try again' });
         return;
       }
-  
+      console.log("password OK");
       req.session.save(() => {
         req.session.user_id = userData.id;
         req.session.loggedIn = true;
         
         res.json({ user: userData, message: 'You are now logged in!' });
       });
-  
+      console.log("logged in");
     } catch (err) {
       res.status(400).json(err);
     }
