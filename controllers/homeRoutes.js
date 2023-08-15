@@ -14,7 +14,7 @@ router.get('/rental', async (req, res) => {
 });
 router.get('/signup', async (req,res) => {
   // Send the rendered Handlebars.js template back as the response
-  res.render('/signup');
+  res.render('signup');
 });
 
 module.exports = router;

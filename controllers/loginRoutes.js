@@ -26,13 +26,13 @@ router.get('/', async (req, res) => {
     try {
       const userData = await User.findOne({ 
         where: { 
-            email: req.body.email 
+            username: req.body.username
         }});
         
       // Check if given email is registered
       if (!userData) {
         res.status(400).json({ 
-            message: 'Incorrect email or password, please try again'
+            message: 'Incorrect username or password, please try again'
         });
         return;
       }
@@ -43,7 +43,7 @@ router.get('/', async (req, res) => {
       if (!validPassword) {
         res
           .status(400)
-          .json({ message: 'Incorrect email or password, please try again' });
+          .json({ message: 'Incorrect username or password, please try again' });
         return;
       }
       console.log("password OK");
