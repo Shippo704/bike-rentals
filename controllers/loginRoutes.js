@@ -1,9 +1,9 @@
 const router = require('express').Router();
 const {User} = require('../models');
 
-// router.get('/', async (req, res) => {
-//   res.render('login');
-// });
+router.get('/', async (req, res) => {
+  res.render('login');
+});
 
 // New User
 router.post('/', async (req, res) => {
