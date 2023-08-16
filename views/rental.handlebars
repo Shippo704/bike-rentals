@@ -1,6 +1,13 @@
 <!-- For the rental page -->
 <table>
   <caption>Rental Options</caption>
+  {{#each vehicles as |vehicle|}}
+    {{#if vehicle.isAvailable}}
+  <p>{{vehicleType}}</p>
+  <p>AVAILABLE</p>
+  <p>{{location}}</p>
+  {{/if}}
+  {{/each}}
   <tr>
     <th>Name</th>
     <th>Cost per hour</th>

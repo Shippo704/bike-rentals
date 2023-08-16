@@ -3,10 +3,6 @@ const {Vehicle} = require('../models');
 const {Location} = require('../models');
 const loggedIn = require('../utils/helpers');
 
-// Default rental page
-router.get('/', async (req, res) => {
-  res.render('rental');
-});
 
 // Get all available vehicles at a specific location
 router.get('/location/:id', loggedIn, async (req, res) => {
