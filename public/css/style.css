@@ -166,7 +166,7 @@ input[type="submit"].btn:hover {
 
 /* login */
 
-.signupbox {
+.loginform {
   background-color: #424242;
   color: white;
   max-width: 400px;
@@ -177,17 +177,9 @@ input[type="submit"].btn:hover {
   margin-top: 50px;
 }
 
-.signupbox h1 {
+.loginform h1 {
   text-align: center;
   margin-bottom: 20px;
-}
-
-.signupbox img.avatar {
-  display: block;
-  margin: 0 auto 20px;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
 }
 
 form {
@@ -231,7 +223,7 @@ input[type="submit"].btn:hover {
 }
 
 .container.signup a {
-  color: #3ecc43;
+  color: #c5cc3e;
   text-decoration: none;
 }
 
@@ -268,6 +260,21 @@ input[type="submit"].btn:hover {
 
 table, th, td {
   border: 1px solid;
+}
+
+.rentals-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rental-card {
+  text-align: center;
+  border: 3px solid;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom: 50px;
 }
 
 
