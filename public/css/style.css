@@ -288,11 +288,10 @@ input[type="submit"].btn:hover {
   font-size: 14px;
   font-weight: bold;
 }
-/* rental table */
+/* rental page */
 
-th, td {
-  padding: 15px;
-  text-align: left;
+.title {
+  align-items: center;
 }
 
 .rentals-list {
