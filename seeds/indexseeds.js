@@ -7,8 +7,8 @@ const seedAll = async () => {
   await sequelize.sync({ force: true });
 
   await seedLocation();
-  await seedVehicle();
 
+  await seedVehicle();
 
   await seedUser();
 

@@ -68,6 +68,7 @@ button {
 button:hover {
   background-color: rgb(148, 27, 3, 0.8);
 }
+
 /* signup */
 
 .signupbox {
@@ -135,7 +136,7 @@ input[type="submit"].btn:hover {
 }
 
 .container.signin a {
-  color: #5acc3e;
+  color: rgb(148, 27, 3, 1);
   text-decoration: none;
 }
 
@@ -236,7 +237,7 @@ input[type="submit"].btn:hover {
 }
 
 .container.signup a {
-  color: #5acc3e;
+  color: #3ecc43;
   text-decoration: none;
 }
 
@@ -246,7 +247,7 @@ input[type="submit"].btn:hover {
 
 #signupButton
 {
-  background-color: #40ad24;
+  background-color: rgb(148, 27, 3, 1);
   color: white;
   border: none;
   padding: 10px;
