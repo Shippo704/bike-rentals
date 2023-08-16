@@ -15,7 +15,7 @@
         <a href="/">Home</a>
         <a href="/rental">Rental Prices</a>
         {{#if loggedIn}}
-        <a href="/"><button>Logout</button></a>
+        <a href="#"><button id="logout">Logout</button></a>
         {{else}}
         <a href="/login"><button>Login</button></a>
         {{/if}}
@@ -31,5 +31,6 @@
       {{{body}}}
     </section>
   </body>
+  <script src="/js/logout.js"></script>
 
 </html>

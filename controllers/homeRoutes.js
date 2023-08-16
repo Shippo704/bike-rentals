@@ -22,8 +22,6 @@ router.get('/rental', async (req, res) => {
       const vehicles = vehicleData.map((vehicle) =>
         vehicle.get({plain:true})
       );
-      //console.log(vehicles);
-      console.log(vehicles[0]);
       // Send the rendered Handlebars.js template back as the response
     res.render('rental', {
       vehicles,
