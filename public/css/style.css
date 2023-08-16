@@ -69,6 +69,38 @@ button:hover {
   background-color: rgb(148, 27, 3, 0.8);
 }
 
+/* homepage */
+.home {
+  background-color: #424242;
+  color: white;
+  max-width: 650px;
+  margin: 50 auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 3.0);
+}
+
+
+.homeBtn {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  /* margin-left: 20px;
+  padding: 9px 25px;
+  background-color: rgb(148, 27, 3, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s; */
+}
+
+h1, p {
+  text-align: center;
+}
+
 /* signup */
 
 section {
