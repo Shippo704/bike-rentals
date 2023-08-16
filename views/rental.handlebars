@@ -1,22 +1,24 @@
+  <h1>Choose your Rental</h1>
 
-  <caption>Rental Options</caption>
+
   <div class="rentals-list">
   {{#each vehicles as |vehicle|}}
     <div>
     <div class="rental-card">
       <p>{{vehicle.vehicleType}}</p>
+      <p>{{vehicle.id}}</p>
       {{#if vehicle.isAvailable}}
-      <p id="available">AVAILABLE</p>
-      <button type="submit">Rent Now!</button>
+      <p>AVAILABLE</p>
+      <a href="/rental/{{vehicle.id}}"><button>Rent Now!</button></a>
       {{else}}
-      <p id="available">UNAVAILABLE</p>
+      <p class="available">UNAVAILABLE</p>
       {{/if}}
     </div>
     </div>
   {{/each}}
   </div>
 
-  <h1>My Rentals</h1>
+  {{!-- <h1>My Rentals</h1>
   <div class="myRentals">
     {{#each vehicles as |vehicle|}}
       {{#unless vehicle.isAvailable}}
@@ -27,5 +29,3 @@
       {{/unless}}
     {{/each}}
   </div>
-
-  
