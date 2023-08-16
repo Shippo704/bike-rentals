@@ -1,4 +1,5 @@
 <!-- For the rental page -->
+<<<<<<< HEAD
 <body>
 
   <h1>Choose your Rental</h1>
@@ -58,3 +59,21 @@
     </table>
   </div>
 </body>
+=======
+  <caption>Rental Options</caption>
+  <div class="rentals-list">
+  {{#each vehicles as |vehicle|}}
+    {{#if vehicle.isAvailable}}
+    <div>
+    <div class="rental-card">
+      <p>{{vehicleType}}</p>
+      <p id="available">AVAILABLE</p>
+      <p>{{location}}</p>
+      <button type="rent">Rent Now!</button>
+    </div>
+    </div>
+  {{/if}}
+  {{/each}}
+  </div>
+  
+>>>>>>> main
