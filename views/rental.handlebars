@@ -3,7 +3,7 @@
 
   <h1>Choose your Rental</h1>
 
-  <form>
+  {{!-- <form>
     <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
     <label for="vehicle1"> Electric bicycle EB2</label><br />
     <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
@@ -15,9 +15,49 @@
     <label for="vehicle1"> Electric Scooter Transporter</label><br />
     <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
     <label for="vehicle1"> Electric Scooter C35</label><br />
-  </form>
+  </form> --}}
 
-  <div class="prices">
+
+  {{!-- <form class="rentalForm">
+    {{#each vehicles as |vehicle|}}
+      {{#if vehicle.isAvailable}}
+      <input type="checkbox" id={{vehicle.id}}/>
+      <label for={{vehicle.id}}>{{vehicle.vehicleType}}, ${{vehicle.price}}</label><br />
+      {{/if}}
+    {{/each}}
+    <input type="submit" value="Submit" />
+  </form> --}}
+
+  <caption>Rental Options</caption>
+  <div class="rentals-list">
+  {{#each vehicles as |vehicle|}}
+    <div>
+    <div class="rental-card">
+      <p>{{vehicle.vehicleType}}</p>
+      {{#if vehicle.isAvailable}}
+      <p id="available">AVAILABLE</p>
+      <button type="submit">Rent Now!</button>
+      {{else}}
+      <p id="available">UNAVAILABLE</p>
+      {{/if}}
+    </div>
+    </div>
+  {{/each}}
+  </div>
+
+  <h1>My Rentals</h1>
+  <div class="myRentals">
+    {{#each vehicles as |vehicle|}}
+      {{#unless vehicle.isAvailable}}
+      <div id="myRental"></div>
+        <p>{{vehicle.vehicleType}}</p>
+        <button type="submit" id="returnButton">Return</button>
+      </div>
+      {{/unless}}
+    {{/each}}
+  </div>
+
+  {{!-- <div class="prices">
 
     <table>
       <caption>Rental Options</caption>
@@ -56,21 +96,9 @@
         <td>{{{isAvailable}}}</td>
       </tr>
     </table>
-  </div>
+  </div> --}}
+
+  
 </body>
-  <caption>Rental Options</caption>
-  <div class="rentals-list">
-  {{#each vehicles as |vehicle|}}
-    {{#if vehicle.isAvailable}}
-    <div>
-    <div class="rental-card">
-      <p>{{vehicle.vehicleType}}</p>
-      <p id="available">AVAILABLE</p>
-      <p>{{vehicle.location}}</p>
-      <button type="rent">Rent Now!</button>
-    </div>
-    </div>
-  {{/if}}
-  {{/each}}
-  </div>
+
   
