@@ -275,6 +275,21 @@ table, th, td {
   border: 1px solid;
 }
 
+.rentals-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rental-card {
+  text-align: center;
+  border: 3px solid;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom: 50px;
+}
+
 
 
 /*waves****************************/

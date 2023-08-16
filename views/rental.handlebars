@@ -1,45 +1,17 @@
 <!-- For the rental page -->
-<table>
   <caption>Rental Options</caption>
+  <div class="rentals-list">
   {{#each vehicles as |vehicle|}}
     {{#if vehicle.isAvailable}}
-  <p>{{vehicleType}}</p>
-  <p>AVAILABLE</p>
-  <p>{{location}}</p>
+    <div>
+    <div class="rental-card">
+      <p>{{vehicleType}}</p>
+      <p id="available">AVAILABLE</p>
+      <p>{{location}}</p>
+      <button type="rent">Rent Now!</button>
+    </div>
+    </div>
   {{/if}}
   {{/each}}
-  <tr>
-    <th>Name</th>
-    <th>Cost per hour</th>
-    <th>Location</th>
-    <th>Availability</th>
-  </tr>
-  <tr>
-    <td>Electric bicycle EB2</td>
-    <td>Electric bicycle E-Wild C2</td>
-    <td>Electric Scooter Urban T2</td>
-    <td>Electric Scooter Transporter</td>
-    <td>Electric Scooter C35</td>
-  </tr>
-  <tr>
-    <td>20</td>
-    <td>20</td>
-    <td>25</td>
-    <td>20</td>
-    <td>20</td>
-  </tr>
-  <tr>
-    <td>{{{address}}}</td>
-    <td>{{{address}}}</td>
-    <td>{{{address}}}</td>
-    <td>{{{address}}}</td>
-    <td>{{{address}}}</td>
-  </tr>
-  <tr>
-    <td>{{{isAvailable}}}</td>
-    <td>{{{isAvailable}}}</td>
-    <td>{{{isAvailable}}}</td>
-    <td>{{{isAvailable}}}</td>
-    <td>{{{isAvailable}}}</td>
-  </tr>
-</table>
+  </div>
+  
