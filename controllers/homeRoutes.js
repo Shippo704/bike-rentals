@@ -5,13 +5,13 @@ const loggedIn = require('../utils/helpers');
 router.get('/', async (req, res) => {
   // Send the rendered Handlebars.js template back as the response
   res.render('homepage', {
-    //loggedIn: req.session.loggedIn
+    loggedIn: req.session.loggedIn
   });
 });
 router.get('/login', async (req, res) => {
   // Send the rendered Handlebars.js template back as the response
   res.render('login', {
-    //loggedIn: req.session.loggedIn
+    loggedIn: req.session.loggedIn
 });
 });
 
@@ -27,7 +27,7 @@ router.get('/rental', async (req, res) => {
       // Send the rendered Handlebars.js template back as the response
     res.render('rental', {
       vehicles,
-      //loggedIn: req.session.loggedIn
+      loggedIn: req.session.loggedIn
     });
     }
     catch (err) {
@@ -37,7 +37,7 @@ router.get('/rental', async (req, res) => {
 router.get('/signup', async (req,res) => {
   // Send the rendered Handlebars.js template back as the response
   res.render('signup', {
-    //loggedIn: req.session.loggedIn
+    loggedIn: req.session.loggedIn
   });
 });
 
